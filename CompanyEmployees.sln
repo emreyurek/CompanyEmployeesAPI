@@ -3,20 +3,32 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompanyEmpoyees", "CompanyEmpoyees\CompanyEmpoyees.csproj", "{C5429B12-1F78-4633-BF4F-3F42B7F78547}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contracts", "Contracts\Contracts.csproj", "{28524132-64A6-483C-9860-8A5F6631C87E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoggerService", "LoggerService\LoggerService.csproj", "{CDF20535-03DA-4F2E-8922-EBC121B1319C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompanyEmployees", "CompanyEmployees\CompanyEmployees.csproj", "{13B3B0DD-BDE5-4EF9-9A70-6A3CA51C3082}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{28524132-64A6-483C-9860-8A5F6631C87E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28524132-64A6-483C-9860-8A5F6631C87E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28524132-64A6-483C-9860-8A5F6631C87E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28524132-64A6-483C-9860-8A5F6631C87E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDF20535-03DA-4F2E-8922-EBC121B1319C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDF20535-03DA-4F2E-8922-EBC121B1319C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDF20535-03DA-4F2E-8922-EBC121B1319C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDF20535-03DA-4F2E-8922-EBC121B1319C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13B3B0DD-BDE5-4EF9-9A70-6A3CA51C3082}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13B3B0DD-BDE5-4EF9-9A70-6A3CA51C3082}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13B3B0DD-BDE5-4EF9-9A70-6A3CA51C3082}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13B3B0DD-BDE5-4EF9-9A70-6A3CA51C3082}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C5429B12-1F78-4633-BF4F-3F42B7F78547}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C5429B12-1F78-4633-BF4F-3F42B7F78547}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C5429B12-1F78-4633-BF4F-3F42B7F78547}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C5429B12-1F78-4633-BF4F-3F42B7F78547}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
