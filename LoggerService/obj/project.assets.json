@@ -195,11 +195,24 @@
       "Contracts/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Entitites": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/Contracts.dll": {}
         },
         "runtime": {
           "bin/placeholder/Contracts.dll": {}
+        }
+      },
+      "Entitites/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/Entitites.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Entitites.dll": {}
         }
       }
     }
@@ -498,6 +511,11 @@
       "type": "project",
       "path": "../Contracts/Contracts.csproj",
       "msbuildProject": "../Contracts/Contracts.csproj"
+    },
+    "Entitites/1.0.0": {
+      "type": "project",
+      "path": "../Entitites/Entitites.csproj",
+      "msbuildProject": "../Entitites/Entitites.csproj"
     }
   },
   "projectFileDependencyGroups": {

@@ -9,3 +9,7 @@ C:\Users\yurek\OneDrive\Masaüstü\Code_Maze_CE\Contracts\obj\Debug\net7.0\Contr
 C:\Users\yurek\OneDrive\Masaüstü\Code_Maze_CE\Contracts\obj\Debug\net7.0\refint\Contracts.dll
 C:\Users\yurek\OneDrive\Masaüstü\Code_Maze_CE\Contracts\obj\Debug\net7.0\Contracts.pdb
 C:\Users\yurek\OneDrive\Masaüstü\Code_Maze_CE\Contracts\obj\Debug\net7.0\ref\Contracts.dll
+C:\Users\yurek\OneDrive\Masaüstü\Code_Maze_CE\Contracts\bin\Debug\net7.0\Entitites.dll
+C:\Users\yurek\OneDrive\Masaüstü\Code_Maze_CE\Contracts\bin\Debug\net7.0\Entitites.pdb
+C:\Users\yurek\OneDrive\Masaüstü\Code_Maze_CE\Contracts\obj\Debug\net7.0\Contracts.csproj.AssemblyReference.cache
+C:\Users\yurek\OneDrive\Masaüstü\Code_Maze_CE\Contracts\obj\Debug\net7.0\Contracts.csproj.CopyComplete

@@ -13,3 +13,5 @@ C:\Users\yurek\OneDrive\Masaüstü\Code_Maze_CE\Repository\obj\Debug\net7.0\Repo
 C:\Users\yurek\OneDrive\Masaüstü\Code_Maze_CE\Repository\obj\Debug\net7.0\refint\Repository.dll
 C:\Users\yurek\OneDrive\Masaüstü\Code_Maze_CE\Repository\obj\Debug\net7.0\Repository.pdb
 C:\Users\yurek\OneDrive\Masaüstü\Code_Maze_CE\Repository\obj\Debug\net7.0\ref\Repository.dll
+C:\Users\yurek\OneDrive\Masaüstü\Code_Maze_CE\Repository\bin\Debug\net7.0\Contracts.dll
+C:\Users\yurek\OneDrive\Masaüstü\Code_Maze_CE\Repository\bin\Debug\net7.0\Contracts.pdb

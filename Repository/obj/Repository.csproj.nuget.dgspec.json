@@ -31,7 +31,11 @@
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\yurek\\OneDrive\\Masaüstü\\Code_Maze_CE\\Entitites\\Entitites.csproj": {
+                "projectPath": "C:\\Users\\yurek\\OneDrive\\Masaüstü\\Code_Maze_CE\\Entitites\\Entitites.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

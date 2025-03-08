@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net7.0": {}
+    "net7.0": {
+      "Entitites/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/Entitites.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Entitites.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Entitites/1.0.0": {
+      "type": "project",
+      "path": "../Entitites/Entitites.csproj",
+      "msbuildProject": "../Entitites/Entitites.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net7.0": []
+    "net7.0": [
+      "Entitites >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\yurek\\.nuget\\packages\\": {},
@@ -38,7 +57,11 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\yurek\\OneDrive\\Masaüstü\\Code_Maze_CE\\Entitites\\Entitites.csproj": {
+              "projectPath": "C:\\Users\\yurek\\OneDrive\\Masaüstü\\Code_Maze_CE\\Entitites\\Entitites.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

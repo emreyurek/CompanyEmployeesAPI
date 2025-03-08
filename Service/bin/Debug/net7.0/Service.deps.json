@@ -1,0 +1,63 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "Service/1.0.0": {
+        "dependencies": {
+          "Contracts": "1.0.0",
+          "Service.Contracts": "1.0.0"
+        },
+        "runtime": {
+          "Service.dll": {}
+        }
+      },
+      "Contracts/1.0.0": {
+        "dependencies": {
+          "Entitites": "1.0.0"
+        },
+        "runtime": {
+          "Contracts.dll": {}
+        }
+      },
+      "Entitites/1.0.0": {
+        "runtime": {
+          "Entitites.dll": {}
+        }
+      },
+      "Service.Contracts/1.0.0": {
+        "dependencies": {
+          "Entitites": "1.0.0"
+        },
+        "runtime": {
+          "Service.Contracts.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Service/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Contracts/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Entitites/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Service.Contracts/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
