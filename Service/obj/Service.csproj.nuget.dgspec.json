@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\yurek\\OneDrive\\Masaüstü\\Code_Maze_CE\\Repository\\Repository.csproj": {}
+    "C:\\Users\\yurek\\OneDrive\\Masaüstü\\Code_Maze_CE\\Service\\Service.csproj": {}
   },
   "projects": {
     "C:\\Users\\yurek\\OneDrive\\Masaüstü\\Code_Maze_CE\\Contracts\\Contracts.csproj": {
@@ -63,14 +63,14 @@
         }
       }
     },
-    "C:\\Users\\yurek\\OneDrive\\Masaüstü\\Code_Maze_CE\\Entitites\\Entitites.csproj": {
+    "C:\\Users\\yurek\\OneDrive\\Masaüstü\\Code_Maze_CE\\Service.Contracts\\Service.Contracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\yurek\\OneDrive\\Masaüstü\\Code_Maze_CE\\Entitites\\Entitites.csproj",
-        "projectName": "Entitites",
-        "projectPath": "C:\\Users\\yurek\\OneDrive\\Masaüstü\\Code_Maze_CE\\Entitites\\Entitites.csproj",
+        "projectUniqueName": "C:\\Users\\yurek\\OneDrive\\Masaüstü\\Code_Maze_CE\\Service.Contracts\\Service.Contracts.csproj",
+        "projectName": "Service.Contracts",
+        "projectPath": "C:\\Users\\yurek\\OneDrive\\Masaüstü\\Code_Maze_CE\\Service.Contracts\\Service.Contracts.csproj",
         "packagesPath": "C:\\Users\\yurek\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\yurek\\OneDrive\\Masaüstü\\Code_Maze_CE\\Entitites\\obj\\",
+        "outputPath": "C:\\Users\\yurek\\OneDrive\\Masaüstü\\Code_Maze_CE\\Service.Contracts\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -122,14 +122,14 @@
         }
       }
     },
-    "C:\\Users\\yurek\\OneDrive\\Masaüstü\\Code_Maze_CE\\Repository\\Repository.csproj": {
+    "C:\\Users\\yurek\\OneDrive\\Masaüstü\\Code_Maze_CE\\Service\\Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\yurek\\OneDrive\\Masaüstü\\Code_Maze_CE\\Repository\\Repository.csproj",
-        "projectName": "Repository",
-        "projectPath": "C:\\Users\\yurek\\OneDrive\\Masaüstü\\Code_Maze_CE\\Repository\\Repository.csproj",
+        "projectUniqueName": "C:\\Users\\yurek\\OneDrive\\Masaüstü\\Code_Maze_CE\\Service\\Service.csproj",
+        "projectName": "Service",
+        "projectPath": "C:\\Users\\yurek\\OneDrive\\Masaüstü\\Code_Maze_CE\\Service\\Service.csproj",
         "packagesPath": "C:\\Users\\yurek\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\yurek\\OneDrive\\Masaüstü\\Code_Maze_CE\\Repository\\obj\\",
+        "outputPath": "C:\\Users\\yurek\\OneDrive\\Masaüstü\\Code_Maze_CE\\Service\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -153,8 +153,8 @@
               "C:\\Users\\yurek\\OneDrive\\Masaüstü\\Code_Maze_CE\\Contracts\\Contracts.csproj": {
                 "projectPath": "C:\\Users\\yurek\\OneDrive\\Masaüstü\\Code_Maze_CE\\Contracts\\Contracts.csproj"
               },
-              "C:\\Users\\yurek\\OneDrive\\Masaüstü\\Code_Maze_CE\\Entitites\\Entitites.csproj": {
-                "projectPath": "C:\\Users\\yurek\\OneDrive\\Masaüstü\\Code_Maze_CE\\Entitites\\Entitites.csproj"
+              "C:\\Users\\yurek\\OneDrive\\Masaüstü\\Code_Maze_CE\\Service.Contracts\\Service.Contracts.csproj": {
+                "projectPath": "C:\\Users\\yurek\\OneDrive\\Masaüstü\\Code_Maze_CE\\Service.Contracts\\Service.Contracts.csproj"
               }
             }
           }
@@ -168,12 +168,6 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "dependencies": {
-            "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[7.0.0, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
