@@ -1,8 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "HV8E6cJUxXkBi+YpRomCUmczZ3oDQJJDvDn1P0IyjExayY+h2FCn6cXNVgQqWUsnfnv76Kwxiug8Gw0VGyteag==",
+  "dgSpecHash": "gEj6BH3NVffEYriNp7b49BsWhz5vKBuerGBKcvonEjKhfU3QgqzN37KyOLvriW3cNxG9AESdqlhjkR7JGKAYHQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\yurek\\OneDrive\\Masaüstü\\Code_Maze_CE\\Service\\Service.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\yurek\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\yurek\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
+    "C:\\Users\\yurek\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\yurek\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\yurek\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
+    "C:\\Users\\yurek\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "C:\\Users\\yurek\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

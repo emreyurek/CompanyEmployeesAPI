@@ -1236,27 +1236,27 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
-      "Entitites/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v7.0",
-        "compile": {
-          "bin/placeholder/Entitites.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Entitites.dll": {}
-        }
-      },
       "Service.Contracts/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
-          "Entitites": "1.0.0"
+          "Shared": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Service.Contracts.dll": {}
         },
         "runtime": {
           "bin/placeholder/Service.Contracts.dll": {}
+        }
+      },
+      "Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Shared.dll": {}
         }
       }
     }
@@ -4181,15 +4181,15 @@
         "system.xml.xdocument.nuspec"
       ]
     },
-    "Entitites/1.0.0": {
-      "type": "project",
-      "path": "../Entitites/Entitites.csproj",
-      "msbuildProject": "../Entitites/Entitites.csproj"
-    },
     "Service.Contracts/1.0.0": {
       "type": "project",
       "path": "../Service.Contracts/Service.Contracts.csproj",
       "msbuildProject": "../Service.Contracts/Service.Contracts.csproj"
+    },
+    "Shared/1.0.0": {
+      "type": "project",
+      "path": "../Shared/Shared.csproj",
+      "msbuildProject": "../Shared/Shared.csproj"
     }
   },
   "projectFileDependencyGroups": {

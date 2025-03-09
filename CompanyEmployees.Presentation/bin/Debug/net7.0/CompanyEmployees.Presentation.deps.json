@@ -767,17 +767,17 @@
           "System.Xml.ReaderWriter": "4.0.11"
         }
       },
-      "Entitites/1.0.0": {
-        "runtime": {
-          "Entitites.dll": {}
-        }
-      },
       "Service.Contracts/1.0.0": {
         "dependencies": {
-          "Entitites": "1.0.0"
+          "Shared": "1.0.0"
         },
         "runtime": {
           "Service.Contracts.dll": {}
+        }
+      },
+      "Shared/1.0.0": {
+        "runtime": {
+          "Shared.dll": {}
         }
       }
     }
@@ -1285,12 +1285,12 @@
       "path": "system.xml.xdocument/4.0.11",
       "hashPath": "system.xml.xdocument.4.0.11.nupkg.sha512"
     },
-    "Entitites/1.0.0": {
+    "Service.Contracts/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "Service.Contracts/1.0.0": {
+    "Shared/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

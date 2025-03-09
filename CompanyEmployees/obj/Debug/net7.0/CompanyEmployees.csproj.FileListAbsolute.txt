@@ -126,3 +126,7 @@ C:\Users\yurek\OneDrive\Masaüstü\Code_Maze_CE\CompanyEmployees\bin\Debug\net7.
 C:\Users\yurek\OneDrive\Masaüstü\Code_Maze_CE\CompanyEmployees\bin\Debug\net7.0\CompanyEmployees.Presentation.pdb
 C:\Users\yurek\OneDrive\Masaüstü\Code_Maze_CE\CompanyEmployees\bin\Debug\net7.0\Service.Contracts.pdb
 C:\Users\yurek\OneDrive\Masaüstü\Code_Maze_CE\CompanyEmployees\obj\Debug\net7.0\CompanyEmployees.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\yurek\OneDrive\Masaüstü\Code_Maze_CE\CompanyEmployees\bin\Debug\net7.0\Shared.dll
+C:\Users\yurek\OneDrive\Masaüstü\Code_Maze_CE\CompanyEmployees\bin\Debug\net7.0\Shared.pdb
+C:\Users\yurek\OneDrive\Masaüstü\Code_Maze_CE\CompanyEmployees\bin\Debug\net7.0\AutoMapper.dll
+C:\Users\yurek\OneDrive\Masaüstü\Code_Maze_CE\CompanyEmployees\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
