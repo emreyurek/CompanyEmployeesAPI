@@ -1,5 +1,3 @@
-
-using System.Net;
 using Contracts;
 using Entitites.ErrorModel;
 using Entitites.Exceptions;

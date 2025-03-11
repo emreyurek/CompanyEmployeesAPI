@@ -58,5 +58,8 @@ namespace CompanyEmployees.Extensions
                 options.UseSqlServer(configuration.GetConnectionString("sqlConnection"));
             });
         }
+
+        // Custom csv formatter 
+        public static IMvcBuilder AddCustomCSVFormatter(this IMvcBuilder builder) => builder.AddMvcOptions(config => config.OutputFormatters.Add(new CsvOutputFormatter()));
     }
 }
