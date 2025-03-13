@@ -14,6 +14,7 @@ namespace CompanyEmployees.Presentation.ModelBinders
                 bindingContext.Result = ModelBindingResult.Failed();
                 return Task.CompletedTask;
             }
+
             var providedValue = bindingContext.ValueProvider.GetValue(bindingContext.ModelName).ToString();
             if (string.IsNullOrEmpty(providedValue))
             {
@@ -26,6 +27,12 @@ namespace CompanyEmployees.Presentation.ModelBinders
 
             var objectArray = providedValue.Split(new[] { "," }, StringSplitOptions.RemoveEmptyEntries).Select(x => converter.ConvertFromString(x.Trim()))
             .ToArray();
+
+            if (objectArray.Length == 0) //check (,,) state
+            {
+                bindingContext.Result = ModelBindingResult.Success(null);
+                return Task.CompletedTask;
+            }
 
             var guidArray = Array.CreateInstance(genericType, objectArray.Length);
             objectArray.CopyTo(guidArray, 0);

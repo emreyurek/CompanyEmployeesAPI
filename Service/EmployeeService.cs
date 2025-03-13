@@ -10,12 +10,12 @@ namespace Service
     public class EmployeeService : IEmployeeService
     {
         private readonly IRepositoryManager _repository;
-        private readonly IMapper _mappger;
+        private readonly IMapper _mapper;
 
-        public EmployeeService(IRepositoryManager repository, IMapper mappger)
+        public EmployeeService(IRepositoryManager repository, IMapper mapper)
         {
             _repository = repository;
-            _mappger = mappger;
+            _mapper = mapper;
         }
 
         public EmployeeDto CreateEmployeeForCompany(Guid companyId, EmployeeForCreationDto employeeForCreationDto, bool trackChanges)
@@ -24,14 +24,28 @@ namespace Service
             if (company is null)
                 throw new CompanyNotFoundException(companyId);
 
-            var employeeEntity = _mappger.Map<Employee>(employeeForCreationDto);
+            var employeeEntity = _mapper.Map<Employee>(employeeForCreationDto);
 
             _repository.Employee.CreateEmployeeForCompany(companyId, employeeEntity);
             _repository.Save();
 
-            var employeeToReturn = _mappger.Map<EmployeeDto>(employeeEntity);
-           
+            var employeeToReturn = _mapper.Map<EmployeeDto>(employeeEntity);
+
             return employeeToReturn;
+        }
+
+        public void DeleteEmployeeForCompany(Guid companyId, Guid id, bool trackChanges)
+        {
+            var company = _repository.Company.GetCompany(companyId, trackChanges);
+            if (company is null)
+                throw new CompanyNotFoundException(companyId);
+
+            var employeeForCompany = _repository.Employee.GetEmployee(companyId, id, trackChanges);
+            if (employeeForCompany is null)
+                throw new EmployeeNotFoundException(id);
+
+            _repository.Employee.DeleteEmployee(employeeForCompany);
+            _repository.Save();
         }
 
         public EmployeeDto GetEmployee(Guid companyId, Guid id, bool trackChanges)
@@ -44,7 +58,7 @@ namespace Service
             if (employeeDb is null)
                 throw new EmployeeNotFoundException(id);
 
-            var employeeDto = _mappger.Map<EmployeeDto>(employeeDb);
+            var employeeDto = _mapper.Map<EmployeeDto>(employeeDb);
             return employeeDto;
         }
 
@@ -55,7 +69,7 @@ namespace Service
                 throw new CompanyNotFoundException(companyId);
 
             var employeesFromDb = _repository.Employee.GetEmployees(companyId, trackChanges);
-            var employeesDto = _mappger.Map<IEnumerable<EmployeeDto>>(employeesFromDb);
+            var employeesDto = _mapper.Map<IEnumerable<EmployeeDto>>(employeesFromDb);
 
             return employeesDto;
         }
