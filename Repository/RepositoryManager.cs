@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using Contracts;
 
 namespace Repository
@@ -18,9 +19,6 @@ namespace Repository
         public ICompanyRepository Company => _companyRepository.Value;
         public IEmployeeRepository Employee => _employeeRepository.Value;
 
-        public void Save()
-        {
-            _repositoryContext.SaveChanges();
-        }
+        public async Task SaveAsync() => await _repositoryContext.SaveChangesAsync();
     }
 }
