@@ -1,3 +1,4 @@
+using CompanyEmployees.Presentation.ActionFilters;
 using Contracts;
 using LoggerService;
 using Microsoft.EntityFrameworkCore;
@@ -61,5 +62,11 @@ namespace CompanyEmployees.Extensions
 
         // Custom csv formatter 
         public static IMvcBuilder AddCustomCSVFormatter(this IMvcBuilder builder) => builder.AddMvcOptions(config => config.OutputFormatters.Add(new CsvOutputFormatter()));
+
+        // Action filter configuration 
+        public static void ConfigureActionFilters(this IServiceCollection services)
+        {
+            services.AddScoped<ValidationFilterAttribute>();
+        }
     }
 }
