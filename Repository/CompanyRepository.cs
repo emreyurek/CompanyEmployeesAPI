@@ -9,10 +9,14 @@ namespace Repository
         public CompanyRepository(RepositoryContext repositoryContext) : base(repositoryContext)
         {
         }
-        public async Task<IEnumerable<Company>> GetAllCompaniesAsync(bool trackChanges) =>
-                 await FindAll(trackChanges)
-                 .OrderBy(c => c.Name)
-                 .ToListAsync();
+        public async Task<IEnumerable<Company>> GetAllCompaniesAsync(bool trackChanges)
+        {
+            var companies = await FindAll(trackChanges)
+            .OrderBy(c => c.Name)
+            .ToListAsync();
+
+            return companies;
+        }
         public async Task<Company> GetCompanyAsync(Guid companyId, bool trackChanges) =>
          await FindByCondition(c => c.Id.Equals(companyId), trackChanges)
          .SingleOrDefaultAsync();

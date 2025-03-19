@@ -1,4 +1,3 @@
-
 using Entitites.Models;
 
 namespace Contracts
