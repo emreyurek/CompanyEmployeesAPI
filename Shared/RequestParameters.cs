@@ -20,6 +20,6 @@ namespace Shared
             }
         }
 
-
+        public string? OrderBy { get; set; }
     }
 }
