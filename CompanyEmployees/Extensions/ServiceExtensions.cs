@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Repository;
 using Service;
 using Service.Contracts;
+using Service.DataShaping;
 
 namespace CompanyEmployees.Extensions
 {
@@ -68,6 +69,12 @@ namespace CompanyEmployees.Extensions
         public static void ConfigureActionFilters(this IServiceCollection services)
         {
             services.AddScoped<ValidationFilterAttribute>();
+        }
+
+        // Datashaper configuration
+        public static void ConfigureDataShaper(this IServiceCollection services)
+        {
+            services.AddScoped(typeof(IDataShaper<>), typeof(DataShaper<>));
         }
     }
 }

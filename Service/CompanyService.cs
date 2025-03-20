@@ -1,8 +1,10 @@
+using System.Dynamic;
 using AutoMapper;
 using Contracts;
 using Entitites.Exceptions;
 using Entitites.Models;
 using Service.Contracts;
+using Shared;
 using Shared.DataTransferObjects;
 
 namespace Service
@@ -11,10 +13,12 @@ namespace Service
     {
         private readonly IRepositoryManager _repository;
         private readonly IMapper _mapper;
-        public CompanyService(IRepositoryManager repository, IMapper mapper)
+        private readonly IDataShaper<CompanyDto> _shaper;
+        public CompanyService(IRepositoryManager repository, IMapper mapper, IDataShaper<CompanyDto> shaper)
         {
             _repository = repository;
             _mapper = mapper;
+            _shaper = shaper;
         }
         private async Task<Company> GetCompanyAndCheckIfItExists(Guid companyId, bool trackChanges)
         {
@@ -23,11 +27,13 @@ namespace Service
                 throw new CompanyNotFoundException(companyId);
             return company;
         }
-        public async Task<IEnumerable<CompanyDto>> GetAllCompaniesAsync(bool trackChanges)
+        public async Task<IEnumerable<ExpandoObject>> GetAllCompaniesAsync(CompanyParameters companyParameters, bool trackChanges)
         {
             var companies = await _repository.Company.GetAllCompaniesAsync(trackChanges);
             var companiesDto = _mapper.Map<IEnumerable<CompanyDto>>(companies);
-            return companiesDto;
+
+            var shapedData = _shaper.ShapeData(companiesDto, companyParameters.Fields);
+            return shapedData;
         }
         public async Task<CompanyDto> GetCompanyAsync(Guid companyId, bool trackChanges)
         {

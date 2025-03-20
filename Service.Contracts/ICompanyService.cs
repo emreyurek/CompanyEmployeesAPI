@@ -1,10 +1,12 @@
+using System.Dynamic;
+using Shared;
 using Shared.DataTransferObjects;
 
 namespace Service.Contracts
 {
     public interface ICompanyService
     {
-        Task<IEnumerable<CompanyDto>> GetAllCompaniesAsync(bool trackChanges);
+        Task<IEnumerable<ExpandoObject>> GetAllCompaniesAsync(CompanyParameters companyParameters, bool trackChanges);
         Task<CompanyDto> GetCompanyAsync(Guid companyId, bool trackChanges);
         Task<CompanyDto> CreateCompanyAsync(CompanyForCreationDto company);
         Task<IEnumerable<CompanyDto>> GetByIdsAsync(IEnumerable<Guid> ids, bool trackChanges);

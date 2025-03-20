@@ -2,6 +2,7 @@ using CompanyEmployees.Presentation.ActionFilters;
 using CompanyEmployees.Presentation.ModelBinders;
 using Microsoft.AspNetCore.Mvc;
 using Service.Contracts;
+using Shared;
 using Shared.DataTransferObjects;
 
 namespace CompanyEmployees.Presentation.Controllers
@@ -15,9 +16,9 @@ namespace CompanyEmployees.Presentation.Controllers
         public CompaniesController(IServiceManager service) => _service = service;
 
         [HttpGet]
-        public async Task<IActionResult> GetCompanies()
+        public async Task<IActionResult> GetCompanies([FromQuery] CompanyParameters companyParameters)
         {
-            var companies = await _service.CompanyService.GetAllCompaniesAsync(trackChanges: false);
+            var companies = await _service.CompanyService.GetAllCompaniesAsync(companyParameters, trackChanges: false);
             return Ok(companies);
         }
 
