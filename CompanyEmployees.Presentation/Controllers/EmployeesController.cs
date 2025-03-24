@@ -15,6 +15,7 @@ namespace CompanyEmployees.Presentation.Controllers
         public EmployeesController(IServiceManager service) => _service = service;
 
         [HttpGet]
+        [HttpHead]
         public async Task<IActionResult> GetEmployeesForCompany([FromRoute] Guid companyId, [FromQuery] EmployeeParameters employeeParameters)
         {
             var pagedResult = await _service.EmployeeService.GetEmployeesAsync(companyId, employeeParameters, trackChanges: false);
@@ -52,6 +53,13 @@ namespace CompanyEmployees.Presentation.Controllers
         {
             await _service.EmployeeService.UpdateEmployeeForCompanyAsync(companyId, id, employee, compTrackChanges: false, empTrackChanges: true);
             return NoContent();
+        }
+
+        [HttpOptions]
+        public IActionResult GetEmployeesOptionsForCompany()
+        {
+            Response.Headers.Add("Allow", "GET, OPTIONS, POST, PUT, DELETE");
+            return Ok();
         }
     }
 }
