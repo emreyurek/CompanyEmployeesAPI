@@ -1,13 +1,14 @@
 using System.Dynamic;
-using System.Threading.Tasks;
 using AutoMapper;
 using Contracts;
 using Entitites.Exceptions;
+using Entitites.LinkModels;
 using Entitites.Models;
 using Service.Contracts;
 using Shared;
 using Shared.DataTransferObjects;
 using Shared.RequestFeatures;
+
 
 namespace Service
 {
@@ -16,12 +17,34 @@ namespace Service
         private readonly IRepositoryManager _repository;
         private readonly IMapper _mapper;
         private readonly IDataShaper<EmployeeDto> _shapper;
-
         public EmployeeService(IRepositoryManager repository, IMapper mapper, IDataShaper<EmployeeDto> shapper)
         {
             _repository = repository;
             _mapper = mapper;
             _shapper = shapper;
+        }
+        private List<Link> CreateLinksForEmployee(Guid companyId, Guid id)
+        {
+            var links = new List<Link>
+             {
+                new Link(
+                    href: $"http://localhost:5297/api/companies/{companyId}/employees/{id}",
+                    rel: "self",
+                    method: "GET"
+                ),
+                new Link(
+                    href: $"http://localhost:5297/api/companies/{companyId}/employees/{id}",
+                    rel: "update-employee",
+                    method: "PUT"
+                ),
+                new Link(
+                    href: $"http://localhost:52971/api/companies/{companyId}/employees/{id}",
+                    rel: "delete-employee",
+                    method: "DELETE"
+                )
+            };
+
+            return links;
         }
         private async Task CheckIfCompanyExists(Guid companyId, bool trackChanges)
         {
@@ -45,9 +68,18 @@ namespace Service
 
             var employeesWithMetaData = await _repository.Employee.GetEmployeesAsync(companyId, employeeParameters, trackChanges);
             var employeesDto = _mapper.Map<IEnumerable<EmployeeDto>>(employeesWithMetaData);
-
             var shapedData = _shapper.ShapeData(employeesDto, employeeParameters.Fields);
-            return (employees: shapedData, metaData: employeesWithMetaData.MetaData);
+
+            // For Hateos
+            var employeesWithLinks = shapedData.Select(e =>
+            {
+                var employeeDict = (IDictionary<string, object>)e;
+                var employeeId = (Guid)employeeDict["Id"];
+                employeeDict.Add("Links", CreateLinksForEmployee(companyId, employeeId));
+                return e;
+            });
+
+            return (employees: employeesWithLinks, metaData: employeesWithMetaData.MetaData);
         }
         public async Task<EmployeeDto> GetEmployeeAsync(Guid companyId, Guid id, bool trackChanges)
         {

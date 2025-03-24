@@ -28,7 +28,10 @@ namespace Service.DataShaping
             var requiredProperties = new List<PropertyInfo>();
             if (!string.IsNullOrWhiteSpace(fieldsString))
             {
-                var fields = fieldsString.Split(',', StringSplitOptions.RemoveEmptyEntries);
+                var fields = fieldsString.Split(',', StringSplitOptions.RemoveEmptyEntries).ToList();
+
+                if (!fields.Contains("Id")) // for hateoas
+                    fields.Add("Id");
 
                 foreach (var field in fields)
                 {
