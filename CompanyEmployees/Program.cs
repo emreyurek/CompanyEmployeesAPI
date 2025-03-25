@@ -25,6 +25,7 @@ builder.Services.Configure<ApiBehaviorOptions>(options =>
 });
 builder.Services.ConfigureActionFilters();
 builder.Services.ConfigureDataShaper();
+builder.Services.ConfigureVersioning();
 builder.Services.AddControllers(config =>
 {
     config.RespectBrowserAcceptHeader = true;
