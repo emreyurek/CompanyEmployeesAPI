@@ -2,6 +2,7 @@ using CompanyEmployees.Presentation.ActionFilters;
 using CompanyEmployees.Presentation.Controllers;
 using Contracts;
 using LoggerService;
+using Marvin.Cache.Headers;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Versioning;
 using Microsoft.EntityFrameworkCore;
@@ -69,10 +70,8 @@ namespace CompanyEmployees.Extensions
         public static IMvcBuilder AddCustomCSVFormatter(this IMvcBuilder builder) => builder.AddMvcOptions(config => config.OutputFormatters.Add(new CsvOutputFormatter()));
 
         // Action filter configuration 
-        public static void ConfigureActionFilters(this IServiceCollection services)
-        {
+        public static void ConfigureActionFilters(this IServiceCollection services) =>
             services.AddScoped<ValidationFilterAttribute>();
-        }
 
         // Datashaper configuration
         public static void ConfigureDataShaper(this IServiceCollection services)
@@ -95,5 +94,21 @@ namespace CompanyEmployees.Extensions
                         .HasDeprecatedApiVersion(new ApiVersion(2, 0));
             });
         }
+
+        // Caching configuration
+        public static void ConfigureResponseCaching(this IServiceCollection services) =>
+            services.AddResponseCaching();
+
+        public static void ConfigureHttpCacheHeaders(this IServiceCollection services) => services.AddHttpCacheHeaders(
+        (expirationOpt) =>
+        {
+            expirationOpt.MaxAge = 100;
+            expirationOpt.CacheLocation = CacheLocation.Private;
+
+        },
+        (validationOpt) =>
+        {
+            validationOpt.MustRevalidate = true;
+        });
     }
 }

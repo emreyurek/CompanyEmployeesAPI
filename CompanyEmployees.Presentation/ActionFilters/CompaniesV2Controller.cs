@@ -9,7 +9,6 @@ namespace CompanyEmployees.Presentation.ActionFilters
     public class CompaniesV2Controller : ControllerBase
     {
         private readonly IServiceManager _service;
-
         public CompaniesV2Controller(IServiceManager service)
         {
             _service = service;
